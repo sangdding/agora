@@ -1,27 +1,22 @@
 package capstone.agora.dto;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
 @RequiredArgsConstructor
-public class ResponseDto<D> {
+public class ResponseDto {
 
-    private final String resultCode;
+    private final int code;
     private final String message;
-    private final D data;
 
-    public static <D> ResponseDto<D> ofSuccess() {
-        return new ResponseDto<>("success", null, null);
+    public static ResponseDto ofSuccess() {
+        return new ResponseDto(200, "success");
     }
 
-    public static <D> ResponseDto<D> ofSuccess(String message, D data) {
-        return new ResponseDto<>("success", message, data);
+    public static ResponseDto error(String message) {
+        return new ResponseDto(400, message);
     }
 
-    public static <D> ResponseDto<D> ofFail(String message) {
-        return new ResponseDto<>("fail", message, null);
+    public static ResponseDto notFound() {
+        return new ResponseDto(404, "not found");
     }
 }
