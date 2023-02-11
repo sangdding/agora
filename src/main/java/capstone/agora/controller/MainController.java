@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/main")
 public class MainController {
 
-    @ApiOperation(value = "공지사항 리스트", notes = "공지사항 리스트를 조회한다.")
-    @GetMapping(value = "/notification")
-    public ResponseDataDto getNotiList() {
-
-    }
-
-    @ApiOperation(value = "랭킹 리스트", notes = "랭킹 리스트를 조회한다.")
-    @GetMapping(value = "/rank")
-    public ResponseDataDto getRank() {
-
-    }
-
-    @ApiOperation(value = "열린마당", notes = "Q&A 리스트를 조회한다.")
-    @GetMapping(value = "/qna")
-    public ResponseDataDto getQnaList() {
-
-    }
+//    @ApiOperation(value = "공지사항 리스트", notes = "공지사항 리스트를 조회한다.")
+//    @GetMapping(value = "/notification")
+//    public ResponseDataDto getNotiList() {
+//
+//    }
+//
+//    @ApiOperation(value = "랭킹 리스트", notes = "랭킹 리스트를 조회한다.")
+//    @GetMapping(value = "/rank")
+//    public ResponseDataDto getRank() {
+//
+//    }
+//
+//    @ApiOperation(value = "열린마당", notes = "Q&A 리스트를 조회한다.")
+//    @GetMapping(value = "/qna")
+//    public ResponseDataDto getQnaList() {
+//
+//    }
 }
