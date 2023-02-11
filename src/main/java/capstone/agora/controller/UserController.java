@@ -1,7 +1,7 @@
 package capstone.agora.controller;
 
-import capstone.agora.dto.LoginFormDto;
-import capstone.agora.dto.RegisterFormDto;
+import capstone.agora.dto.user.LoginFormDto;
+import capstone.agora.dto.user.RegisterFormDto;
 import capstone.agora.dto.ResponseDataDto;
 import capstone.agora.dto.ResponseDto;
 import capstone.agora.service.UserService;

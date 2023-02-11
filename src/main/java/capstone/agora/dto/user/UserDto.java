@@ -1,4 +1,4 @@
-package capstone.agora.dto;
+package capstone.agora.dto.user;
 
 import capstone.agora.entity.User;
 import jakarta.persistence.Column;

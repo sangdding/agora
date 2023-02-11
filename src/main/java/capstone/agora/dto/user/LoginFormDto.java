@@ -1,4 +1,4 @@
-package capstone.agora.dto;
+package capstone.agora.dto.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

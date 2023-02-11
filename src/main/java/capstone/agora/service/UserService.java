@@ -2,6 +2,9 @@ package capstone.agora.service;
 
 import capstone.agora.Repository.UserRepository;
 import capstone.agora.dto.*;
+import capstone.agora.dto.user.LoginFormDto;
+import capstone.agora.dto.user.RegisterFormDto;
+import capstone.agora.dto.user.UserDto;
 import capstone.agora.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
