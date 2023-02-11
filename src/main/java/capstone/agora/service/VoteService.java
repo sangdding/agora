@@ -45,7 +45,7 @@ public class VoteService {
     // 투표 하기
     @Transactional
     public ResponseDto joinVote(VoteJoinDto voteJoinDto) {
-        Optional<Vote> findVote = voteRepository.getVoteByVoteNum(voteJoinDto.getNum());
+        Optional<Vote> findVote = voteRepository.getVoteByNum(voteJoinDto.getNum());
         if (findVote.isEmpty()) {
             return ResponseDto.error("not-found");
         }

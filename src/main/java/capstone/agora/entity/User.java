@@ -1,6 +1,7 @@
 package capstone.agora.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.List;
 @Entity
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "USER")
 public class User {
 
@@ -19,7 +21,7 @@ public class User {
     @Column(name = "USER_ID")
     private Long id; // pk
 
-    private String userId; // 사용자 아이디
+    private String userIdentifier; // 사용자 아이디
 
     private String password; // 비밀번호
 

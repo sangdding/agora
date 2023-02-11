@@ -18,7 +18,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     public ResponseDto login(LoginFormDto loginFormDto) {
-        Optional<User> findUser = userRepository.findUserByUserId(loginFormDto.getUserId());
+        Optional<User> findUser = userRepository.findUserByUserIdentifier(loginFormDto.getUserId());
         if (findUser.isEmpty()) {
             return ResponseDto.notFound();
         } else {
@@ -30,7 +30,7 @@ public class UserService {
     }
 
     public ResponseDto duplicatedIdCheck(String userId) {
-        if (userRepository.existsUserByUserId(userId)) {
+        if (userRepository.existsUserByUserIdentifier(userId)) {
             return ResponseDto.error("duplicated-id");
         } else {
             return ResponseDto.ofSuccess();
@@ -38,7 +38,7 @@ public class UserService {
     }
 
     public void register(RegisterFormDto registerFormDto) {
-        userRepository.save(User.builder().userId(registerFormDto.getUserId())
+        userRepository.save(User.builder().userIdentifier(registerFormDto.getUserId())
                 .password(registerFormDto.getPassword())
                 .email(registerFormDto.getEmail())
                 .nickname(registerFormDto.getNickname())
@@ -50,7 +50,7 @@ public class UserService {
     }
 
     public ResponseDataDto<UserDto> getUserInfo(String userId) {
-        Optional<User> findUser = userRepository.findUserByUserId(userId);
+        Optional<User> findUser = userRepository.findUserByUserIdentifier(userId);
         if (findUser.isEmpty()) {
             return ResponseDataDto.ofFail("not-found");
         }

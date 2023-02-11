@@ -1,7 +1,8 @@
 package capstone.agora.entity;
 
 import capstone.agora.dto.vote.VoteType;
-import jakarta.persistence.*;
+import javax.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,7 @@ import java.util.List;
 @Table(name = "VOTE")
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Vote {
 
     @Id

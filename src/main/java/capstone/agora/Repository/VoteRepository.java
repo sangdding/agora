@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface VoteRepository extends JpaRepository <Vote, Long> {
 
-    Optional<Vote> getVoteByVoteNum(int voteNum);
+    Optional<Vote> getVoteByNum(int voteNum);
 
     @Query("select v.num, v.author, v.title, v.time from Vote v")
     List<Vote> getEntireVote();

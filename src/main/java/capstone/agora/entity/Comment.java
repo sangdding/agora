@@ -1,18 +1,18 @@
 package capstone.agora.entity;
 
-import capstone.agora.entity.User;
-import capstone.agora.entity.Vote;
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Builder
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "COMMENT")
 public class Comment {
 

@@ -1,7 +1,6 @@
 package capstone.agora.dto.user;
 
 import capstone.agora.entity.User;
-import jakarta.persistence.Column;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
