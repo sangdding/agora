@@ -15,3 +15,12 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+springdoc:
+  api-docs:
+    version: openapi_3_0
+  packages-to-scan: capstone.agora.controller
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swagger-ui.html
