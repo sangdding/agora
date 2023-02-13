@@ -21,14 +21,19 @@ public class Comment {
     @Column(name = "COMMENT_ID")
     private Long id; // pk
 
+    @Column(name = "AUTHOR")
     private String author; // 작성자
 
+    @Column(name = "CONTEXT")
     private String context; // 본문
 
+    @Column(name = "CREATE_TIME")
     private LocalDateTime createTime; // 작성 시간
 
+    @Column(name = "RECOMMEND_CNT")
     private int recommendCnt; // 추천 수
 
+    @Column(name = "OPPOSE_CNT")
     private int opposeCnt; // 반대 수
 
     @ManyToOne

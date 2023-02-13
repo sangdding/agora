@@ -18,7 +18,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/login")
-    public ResponseDto login(@RequestParam LoginFormDto loginFormDto) {
+    public ResponseDto login(@RequestBody LoginFormDto loginFormDto) {
         return userService.login(loginFormDto);
     }
 

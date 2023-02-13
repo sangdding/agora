@@ -21,22 +21,31 @@ public class User {
     @Column(name = "USER_ID")
     private Long id; // pk
 
+    @Column(name = "USER_IDENTIFIER")
     private String userIdentifier; // 사용자 아이디
 
+    @Column(name = "PASSWORD")
     private String password; // 비밀번호
 
+    @Column(name = "NICKNAME")
     private String nickname; // 닉네임
 
+    @Column(name = "EMAIL")
     private String email; // 이메일
 
+    @Column(name = "SCORE")
     private int score; // 활동 점수
 
+    @Column(name = "DEBATE_COUNT")
     private int debateCount; // 참여한 토론 수
 
+    @Column(name = "VOTE_COUNT")
     private int voteCount; // 참여한 투표 수
 
+    @Column(name = "CREATE_COUNT")
     private int createCount; // 작성한 게시글 수
 
+    @Column(name = "COMMENT_COUNT")
     private int commentCount; // 작성한 댓글 수
 
     @OneToMany(mappedBy = "user")
