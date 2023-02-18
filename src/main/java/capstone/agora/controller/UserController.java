@@ -4,6 +4,7 @@ import capstone.agora.dto.ResponseDataDto;
 import capstone.agora.dto.ResponseDto;
 import capstone.agora.dto.user.LoginFormDto;
 import capstone.agora.dto.user.RegisterFormDto;
+import capstone.agora.dto.user.UserDto;
 import capstone.agora.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -18,12 +19,12 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/login")
-    public ResponseDto login(@RequestBody LoginFormDto loginFormDto) {
+    public ResponseDto login(LoginFormDto loginFormDto) {
         return userService.login(loginFormDto);
     }
 
     @PostMapping("/register")
-    public ResponseDto register(@RequestParam RegisterFormDto registerFormDto) {
+    public ResponseDto register(RegisterFormDto registerFormDto) {
         userService.register(registerFormDto);
         return ResponseDto.ofSuccess();
     }
@@ -34,8 +35,8 @@ public class UserController {
     }
 
     @GetMapping("/info")
-    public ResponseDataDto userInfo(@RequestParam String userId) {
-        return userInfo(userId);
+    public ResponseDataDto<UserDto> userInfo(@RequestParam String userId) {
+        return userService.getUserInfo(userId);
     }
 
 }
