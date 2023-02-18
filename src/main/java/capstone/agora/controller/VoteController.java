@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @RequiredArgsConstructor
 @RequestMapping("/vote")
+@RestController
 public class VoteController {
 
     private final VoteService voteService;
@@ -24,13 +24,15 @@ public class VoteController {
     }
 
     @PostMapping("/create")
-    public ResponseDto createVote(@RequestParam VoteFormDto voteFormDto) {
+    public ResponseDto createVote(VoteFormDto voteFormDto) {
         voteService.createVote(voteFormDto);
         return ResponseDto.ofSuccess();
     }
 
     @PostMapping("/join")
-    public ResponseDto joinVote(@RequestBody VoteJoinDto voteJoinDto) {
+    public ResponseDto joinVote(VoteJoinDto voteJoinDto) {
         return voteService.joinVote(voteJoinDto);
     }
 }
+
+
