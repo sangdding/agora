@@ -48,6 +48,10 @@ public class User {
     @Column(name = "COMMENT_COUNT")
     private int commentCount; // 작성한 댓글 수
 
+    @Column(name = "ROLE")
+    @Enumerated
+    private Role role; // 유저 권한
+
     @OneToMany(mappedBy = "user")
     private List<Comment> comments;
 
