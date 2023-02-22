@@ -16,4 +16,6 @@ public interface VoteRepository extends JpaRepository <Vote, Long> {
     @Query("select v.num, v.author, v.title, v.time from Vote v")
     List<Vote> getEntireVote();
 
+    @Override
+    void deleteAll();
 }

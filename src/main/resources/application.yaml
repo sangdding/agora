@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://capstone-db-server.cfajzfxucmki.ap-northeast-2.rds.amazonaws.com:3306/agora
-    username: admin
-    password: sang7952
+#    url: jdbc:mysql://capstone-db-server.cfajzfxucmki.ap-northeast-2.rds.amazonaws.com:3306/agora
+#    username: admin
+#    password: sang7952
+    url: jdbc:mysql://localhost:3306/agora
+    username: root
+    password: sang7952@
     driver-class-name: com.mysql.cj.jdbc.Driver
   kafka:
     consumer:
